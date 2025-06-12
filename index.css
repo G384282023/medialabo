@@ -3,15 +3,15 @@ h1{
 	text-shadow: 1px 1px 2px red;
     border-bottom: 1px solid #375e97;
 }
-a:link {
+.lin:link {
     color: red;
   }
   
-  a:visited {
+  .lin:visited {
     color: blue;
   }
   
-  a:hover {
+  .lin:hover {
     text-decoration: none;
   }
 h2{
