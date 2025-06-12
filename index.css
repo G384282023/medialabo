@@ -1,0 +1,21 @@
+h1{
+    color: red;
+	text-shadow: 1px 1px 2px red;
+    border-bottom: 1px solid #375e97;
+}
+a:link {
+    color: red;
+  }
+  
+  a:visited {
+    color: blue;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+h2{
+    color: black;
+	text-shadow: 1px 1px 2px red;
+
+}
