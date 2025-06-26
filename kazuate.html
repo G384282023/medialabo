@@ -8,8 +8,14 @@
 
   <body>
     <h1>数当てゲーム</h1>
-    <p>将来ここにはテキストボックスとボタンを設置します</p>
-    <p><span id="kaisu">1</span>回目の予想: <span id="answer">4</span></p>
-    <p id="result">将来ここに判定結果を表示します</p>
+    <p>
+      <label for="user_input">予想する数：</label>
+      <input type="text" id="user_input" name="user_input" size="3">
+      <button id="guess">回答</button>
+    </p>
+
+    <p><span id="kaisu">1</span>回目の予想: <span id="answer"></span></p>
+
+    <p id="result"></p>
   </body>
 </html>
