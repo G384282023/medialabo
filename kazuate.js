@@ -1,28 +1,36 @@
 'use strict';
 
-let kotae = Math.floor(Math.random() * 10) + 1;  
-let kaisu = 1;
+let kotae = Math.floor(Math.random() * 10) + 1;
+console.log('答え（デバッグ用）: ' + kotae);
 
-document.getElementById('guess').addEventListener('click', hantei);
+
+document.getElementById("guess").addEventListener("click", hantei);
+
 
 function hantei() {
-  document.getElementById('kaisu').textContent = kaisu;
+  let kaisu = parseInt(document.getElementById("kaisu").textContent, 10);
 
-  let input = document.getElementById('user_input').value;
-  let yoso = parseInt(input, 10);  
-  document.getElementById('answer').textContent = yoso;
+  let yoso = parseInt(document.getElementById("user_input").value, 10);
 
-  let result = document.getElementById('result');
+  document.getElementById("answer").textContent = yoso;
 
-  if (yoso === kotae) {
-    result.textContent = "正解です。おめでとう！";
-  } else if (kaisu >= 3) {
-    result.textContent = "答えは " + kotae + " でした。残念。";
-  } else if (yoso < kotae) {
-    result.textContent = "まちがい。答えはもっと大きいですよ。";
-  } else if (yoso > kotae) {
-    result.textContent = "まちがい。答えはもっと小さいですよ。";
+  let result = document.getElementById("result");
+
+  if (kaisu >= 4) {
+    result.textContent = "答えは " + kotae + " でした．すでにゲームは終わっています";
+  } else if (yoso === kotae) {
+    result.textContent = "正解です．おめでとう!";
+    kaisu = 4;
+  } else {
+    if (kaisu === 3) {
+      result.textContent = "まちがい．残念でした答えは " + kotae + " です．";
+    } else if (yoso < kotae) {
+      result.textContent = "まちがい．答えはもっと大きいですよ";
+    } else {
+      result.textContent = "まちがい．答えはもっと小さいですよ";
+    }
+    kaisu++;
   }
 
-  kaisu++;
+  document.getElementById("kaisu").textContent = kaisu;
 }
