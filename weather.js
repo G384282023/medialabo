@@ -31,7 +31,10 @@ function printDom(data) {
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
-
+window.addEventListener("DOMContentLoaded", function() {
+  const button = document.getElementById("search-button");
+  button.addEventListener("click", sendRequest);
+});
 
 
 
@@ -42,7 +45,8 @@ function sendRequest() {
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
 function showResult(resp) {
-
+const key = document.getElementById("search-key").value;
+  console.log("検索キー:", key);
 }
 
 // 課題6-1: 通信エラーが発生した時の処理
