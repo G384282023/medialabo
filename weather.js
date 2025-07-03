@@ -1,34 +1,45 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-  let tenki = {
-    "coord":{
-      "lon":116.3972,
-      "lat":39.9075
-    },
-    "weather":[{
-      "description":"曇りがち",
-    }],
-    "base":"station",
-    "main":{
-      "temp_min":9.94,
-      "temp_max":9.94,
-      "humidity":14,
-    },
-    "visibility": 10000,
-    "wind": {
-    "speed": 2.65,
-    "deg": 197,
-  },
-  "name":"北京市",
+  function print(data) {
+  console.log("都市名:", data.name);
+  console.log("経度:", data.coord.lon);
+  console.log("緯度:", data.coord.lat);
+  console.log("天気:", data.weather[0].description);
+  console.log("最低気温:", data.main.temp_min);
+  console.log("最高気温:", data.main.temp_max);
+  console.log("湿度:", data.main.humidity);
+  console.log("風速:", data.wind.speed);
+  console.log("風向:", data.wind.deg);
 }
+
+
 }
 
 
 // 課題5-1 の関数 printDom() はここに記述すること
 function printDom(data) {
+  // div#result を作成
+  let resultDiv = document.createElement("div");
+  resultDiv.id = "result";
 
+  // 情報を追加
+  resultDiv.innerHTML = `
+    <p>都市名: ${data.name}</p>
+    <p>経度: ${data.coord.lon}</p>
+    <p>緯度: ${data.coord.lat}</p>
+    <p>天気: ${data.weather[0].description}</p>
+    <p>最低気温: ${data.main.temp_min}</p>
+    <p>最高気温: ${data.main.temp_max}</p>
+    <p>湿度: ${data.main.humidity}</p>
+    <p>風速: ${data.wind.speed}</p>
+    <p>風向: ${data.wind.deg}</p>
+  `;
+
+  // body の最後に追加
+  document.body.appendChild(resultDiv);
 }
+
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
