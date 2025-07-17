@@ -40,7 +40,8 @@ function printDom(data) {
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
 
-
+let b = document.querySelector('#sendRequest');
+b.addEventListener('click', sendRequest);
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
@@ -62,7 +63,6 @@ function showResult(resp) {
 
     console.log(data);
 
-    console.log(data.x);
 
 }
 
