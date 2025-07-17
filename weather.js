@@ -45,7 +45,35 @@ b.addEventListener('click', sendRequest);
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/{id}.json';
+  let i = document.querySelector('input["name=city"]');
+  let u = i.value;
+  let id;
+  if(u === 'カイロ'){
+id = "360630" 
+} else if (u === 'モスクワ'){
+  id = "524901"
+} else if(u === 'ヨハネスブルグ'){
+  id = "993800"
+}else if(u === '北京'){
+  id = "1816670"
+}else if(u === '東京'){
+  id = "1850147"
+}else if(u === 'シンガポール'){
+  id = "1880252"
+}else if(u === 'シドニー'){
+  id = "2147714"
+}else if(u === 'ロンドン'){
+  id = "2643743"
+}else if(u === 'パリ'){
+  id = "2968815"
+}else if(u === 'リオデジャネイロ'){
+  id = "3451189"
+}else if(u === 'ニューヨーク'){
+  id = "5128581"
+}else if(u === 'ロサンゼルス'){
+  id = "5368361"
+}
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/' + id +'.json';
 
     axios.get(url)
         .then(showResult)   
@@ -61,7 +89,7 @@ function showResult(resp) {
         data = JSON.parse(data);
     }
 
-    console.log(data);
+    printDom(data);
 
 
 }
