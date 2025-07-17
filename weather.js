@@ -1,7 +1,7 @@
 
 // 課題3-2 のプログラムはこの関数の中に記述すること
 function print(data) {
-  function print(data) {
+  
   console.log("都市名:", data.name);
   console.log("経度:", data.coord.lon);
   console.log("緯度:", data.coord.lat);
@@ -14,7 +14,7 @@ function print(data) {
 }
 
 
-}
+
 
 
 // 課題5-1 の関数 printDom() はここに記述すること
