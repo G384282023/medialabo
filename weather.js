@@ -45,7 +45,7 @@ b.addEventListener('click', sendRequest);
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
 function sendRequest() {
-  let i = document.querySelector('input["name=city"]');
+  let i = document.querySelector('input[name="city"]');
   let u = i.value;
   let id;
   if(u === 'カイロ'){
