@@ -13,11 +13,11 @@ h1 {
 }
 
 h2 {
-	border: solid 1px black;
+	
 	margin: 5px 0;
 	font-family: cursive;
 	color: #3f3faf;
-	background: linear-gradient(white, #ffefaf);
+	background: linear-gradient(45deg,white, #ffefaf);
 
 
 }
